@@ -14,3 +14,28 @@ Our measles detection tool can be downloaded from the following link: [**Downloa
 - Adapt the model to screen other infectious diseases with skin lesions and associated clinical features
 
 ### Adjusting the Threshold To adjust the threshold, edit the following line in `calculate.py` (located in the `utils/md` folder):
+
+
+```python predicted_label = model(input.to(model.device))
+
+
+## Adjusting the Detection Threshold
+You can modify the detection threshold in your code to control how confident the model must be before classifying an image as measles.
+For example:
+```python
+import torch.nn.functional as F
+# forward pass
+predicted_label = model(input.to(model.device))
+output = F.softmax(predicted_label, dim=1)
+
+# get probability for measles class (assuming class index 1 = measles)
+measles_prob = output[0, 1].item()
+
+# set threshold (e.g., 0.7)
+threshold = 0.7
+if measles_prob >= threshold:
+  print(f"measles detected (probability: {measles_prob:.2f})")
+  responses["measles_detected"] = 1
+else:
+  print(f"no measles detected (probability: {measles_prob:.2f})")
+  responses["measles_detected"] = 0
