@@ -15,8 +15,8 @@ Our measles detection tool can be downloaded from the following link: [**Downloa
 
 ### Adjusting the Threshold To adjust the threshold, edit the following line in `calculate.py` (located in the `utils/md` folder):
 
-
-```python predicted_label = model(input.to(model.device))
+```python
+predicted_label = model(input.to(model.device))
 
 
 ## Adjusting the Detection Threshold
