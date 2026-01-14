@@ -22,7 +22,8 @@ predicted_label = model(input.to(model.device))
 ## Adjusting the Detection Threshold
 You can modify the detection threshold in your code to control how confident the model must be before classifying an image as measles.
 For example:
-```python
+
+
 import torch.nn.functional as F
 # forward pass
 predicted_label = model(input.to(model.device))
