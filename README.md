@@ -5,6 +5,7 @@ The deep learning model was tuned, and the parameters were saved.
 You can assess the tuned model using: 
 ``model.load_state_dict(torch.load('model paras.ckpt'))``
 
-Our measles detection tool can be downloaded using the following link: [**Measles detection app downloading link**]([http://measlesdetect.natapp1.cc](https://1drv.ms/u/c/52e4df90413ab7a1/IQD4puD3DpHXSJ5Dxx1RaBDcAZUAMZv9q0SbUoJxrNshC-s?e=CZbBlj) 
+Our measles detection tool can be downloaded from the following link: [**Download Measles Detection App**](https://1drv.ms/u/c/52e4df90413ab7a1/IQD4puD3DpHXSJ5Dxx1RaBDcAZUAMZv9q0SbUoJxrNshC-s?e=CZbBlj)
+
 
 You can use the app.py to activate the tool
